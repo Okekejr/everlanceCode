@@ -20,9 +20,11 @@ export const ProfileList: FC<Props> = ({ data, ...rest }) => {
       }}
       {...rest}
     >
-      {data?.map((user) => {
-        return <Cards data={user} key={user.id} />;
-      })}
+      {data
+        ? data?.map((user) => {
+            return <Cards log={user} key={user.id} />;
+          })
+        : ""}
     </Grid>
   );
 };

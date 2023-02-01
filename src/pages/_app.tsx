@@ -9,7 +9,13 @@ import theme from "../theme";
 import { Layout } from "@/layout/Layout";
 import "../styles/input.css";
 
-const queryClient = new QueryClient();
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      cacheTime: 1000 * 60 * 60 * 24,
+    },
+  },
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
