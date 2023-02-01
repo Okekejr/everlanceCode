@@ -7,3 +7,12 @@ export const Request = async (text: string) => {
 
   return users.items;
 };
+
+export const ProfileRequest = async (data: string) => {
+  const req = await fetch(`https://api.github.com/users/${data}`);
+
+  const det = await req.json()
+
+  return det
+
+};

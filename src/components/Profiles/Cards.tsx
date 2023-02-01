@@ -11,13 +11,26 @@ import {
 } from "@chakra-ui/react";
 import { FC } from "react";
 import { AiOutlineGithub } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 interface Props extends BoxProps {
-  data: ItemsEntity;
+  log: ItemsEntity;
 }
 
-export const Cards: FC<Props> = ({ data, ...rest }) => {
-  const { avatar_url, login, html_url } = data;
+export const Cards: FC<Props> = ({ log, ...rest }) => {
+  const { avatar_url, login, html_url, url } = log;
+
+  const router = useRouter();
+
+  const handleButtonClick = (url: string) => {
+    if (url) {
+      router.push({
+        pathname: "/UserProfile",
+        query: { data: url },
+      });
+    }
+  };
+
   return (
     <VStack {...rest}>
       <Box
@@ -29,7 +42,6 @@ export const Cards: FC<Props> = ({ data, ...rest }) => {
         height={{ base: "auto", lg: "10rem" }}
         p={4}
         w={{ base: "18rem", lg: "20rem" }}
-        backdropFilter="blur(24px)"
       >
         <Flex alignItems="center" mb={8}>
           <Avatar
@@ -47,7 +59,7 @@ export const Cards: FC<Props> = ({ data, ...rest }) => {
               <AiOutlineGithub size="1.4rem" />
             </Link>
           </Button>
-          <Button>View profile</Button>
+          <Button onClick={() => handleButtonClick(login)}>View profile</Button>
         </Flex>
       </Box>
     </VStack>
