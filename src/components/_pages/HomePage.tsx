@@ -1,15 +1,15 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { FC, useState } from "react";
 import { SectionContainer } from "../SectionContainer";
 import { useQuery } from "@tanstack/react-query";
 import { Request } from "../Request/Request";
 import { ProfileList } from "../Profiles/ProfileList";
 
-const HomePage = () => {
+const HomePage: FC = () => {
   const [search, setSearch] = useState("");
   const [final, setFinal] = useState("");
 
-  const { data, error } = useQuery(
+  const { data } = useQuery(
     ["userData", final],
     () => Request(final),
 
@@ -17,8 +17,6 @@ const HomePage = () => {
   );
 
   console.log(data);
-
-  if (error) return "An error has occurred: " + error;
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
@@ -32,35 +30,37 @@ const HomePage = () => {
   };
 
   return (
-    <SectionContainer>
-      <Flex
-        justifyContent="space-between"
-        w={{ base: "fit-content", md: "2xl", lg: "6xl" }}
-        mb={8}
-      >
-        <Heading
-          fontSize={{ base: "2xl", md: "4xl", lg: "2rem" }}
-          fontWeight="700"
+    <>
+      <SectionContainer>
+        <Flex
+          justifyContent="space-between"
+          w={{ base: "fit-content", md: "2xl", lg: "6xl" }}
+          mb={8}
         >
-          GitHub Users
-        </Heading>
+          <Heading
+            fontSize={{ base: "2xl", md: "4xl", lg: "2rem" }}
+            fontWeight="700"
+          >
+            GitHub Users
+          </Heading>
 
-        <form onSubmit={submitHandler}>
-          <input
-            className="input-form"
-            type="text"
-            value={search}
-            placeholder="Enter username or Email"
-            onChange={onChangeHandler}
-          />
-        </form>
-      </Flex>
-      {data ? (
-        <ProfileList data={data} />
-      ) : (
-        <Text>Looks Like you haven't searched yet </Text>
-      )}
-    </SectionContainer>
+          <form onSubmit={submitHandler}>
+            <input
+              className="input-form"
+              type="text"
+              value={search}
+              placeholder="Enter username or Email"
+              onChange={onChangeHandler}
+            />
+          </form>
+        </Flex>
+        {data ? (
+          <ProfileList data={data} />
+        ) : (
+          <Text>Looks Like you haven't searched yet </Text>
+        )}
+      </SectionContainer>
+    </>
   );
 };
 
