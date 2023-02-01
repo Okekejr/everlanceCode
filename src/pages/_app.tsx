@@ -7,6 +7,7 @@ import {
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../theme";
 import { Layout } from "@/layout/Layout";
+import "../styles/input.css";
 
 const queryClient = new QueryClient();
 
