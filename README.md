@@ -33,13 +33,14 @@ Home Page:
 <img width="1438" alt="Screenshot 2023-02-02 at 6 16 20" src="https://user-images.githubusercontent.com/85338878/216324739-020d2e26-31f9-4200-ac63-23969b046af0.png">
 
 Users Page:
-<img width="1440" alt="Screenshot 2023-02-02 at 6 16 34" src="https://user-images.githubusercontent.com/85338878/216324780-a947f117-01d4-4373-87e3-0f3f315eab10.png">
+<img width="1439" alt="Screenshot 2023-02-02 at 6 28 08" src="https://user-images.githubusercontent.com/85338878/216325203-074274a1-178b-4cd2-9edc-0049306ca205.png">
 
 User Profile:
-<img width="1440" alt="Screenshot 2023-02-02 at 6 16 44" src="https://user-images.githubusercontent.com/85338878/216324812-9d1de35c-f55b-4982-9c9b-85fcb9aa04b0.png">
+<img width="1440" alt="Screenshot 2023-02-02 at 6 28 16" src="https://user-images.githubusercontent.com/85338878/216325236-4c1ce449-7461-4067-8753-0fd5f1ceb15f.png">
 
 Color Modes:
-<img width="1440" alt="Screenshot 2023-02-02 at 6 16 52" src="https://user-images.githubusercontent.com/85338878/216324842-7558106e-4ec8-4bc9-80a7-2081c2397921.png">
+<img width="1440" alt="Screenshot 2023-02-02 at 6 28 24" src="https://user-images.githubusercontent.com/85338878/216325268-248fd05b-d013-4a52-b8aa-44512b8d13ea.png">
+
 
 
 #### Live link
