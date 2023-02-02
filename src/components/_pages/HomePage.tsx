@@ -1,7 +1,7 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { FC, useState } from "react";
 import { SectionContainer } from "../SectionContainer";
-import { useQuery, QueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { Request } from "../Request/Request";
 import { ProfileList } from "../Profiles/ProfileList";
 
@@ -15,8 +15,6 @@ const HomePage: FC = () => {
 
     { enabled: Boolean(final) }
   );
-
-  console.log(data)
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
