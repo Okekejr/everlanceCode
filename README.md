@@ -1,6 +1,6 @@
 # everlance-app
 
-The everlance app was built with the Github API, it renders a lits of users after you query it through the search input and returns a list of users with more detials, it also guves you an interactive and smooth UI.
+The everlance app was built with the Github API, it renders a lits of users after you query it through the search input and returns a list of users with more detials, it also guves you an interactive and smooth UI. 
 Fully responsive and has Dark and Light Mode features.
 The Project uses React Query to fetch data from the API. Check it out https://tanstack.com/query/v4/docs/react/overview
 
@@ -22,14 +22,14 @@ yarn run dev
 
 1. On page load the app renders the Homepage with Navbar and Search Bar with some texts.
 2. Query the API by Search by username or email and this return a list of users.
-3. Each result as displayed in a card, 3 max per row and 9 in total depending on the search results.
-4. Click on the Github logo to go the actual Github website of the user.
+3. Each result as  displayed in a card, 3 max per row and 9 in total depending on the search results.
+4. Click on the Github logo to go the actual Github website of the user. 
 5. Click on the 'View Profile' button to view a profile detail on a different page with more details.
 6. Clicking on the Logo takes you back to the homepage.
 
 ## Demo
 
-Home Page:
+Home Page: 
 <img width="1438" alt="Screenshot 2023-02-02 at 6 16 20" src="https://user-images.githubusercontent.com/85338878/216324739-020d2e26-31f9-4200-ac63-23969b046af0.png">
 
 Users Page:
@@ -40,6 +40,8 @@ User Profile:
 
 Color Modes:
 <img width="1440" alt="Screenshot 2023-02-02 at 6 28 24" src="https://user-images.githubusercontent.com/85338878/216325268-248fd05b-d013-4a52-b8aa-44512b8d13ea.png">
+
+
 
 #### Live link
 
