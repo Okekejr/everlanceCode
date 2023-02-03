@@ -15,7 +15,7 @@ export const MainNavigation: FC<FlexProps> = (props) => {
     >
       <Flex
         justifyContent="space-between"
-        w={{ base: "8rem", md: "12rem" }}
+        w={{ base: "10rem", md: "12rem" }}
         px={{ base: "1rem" }}
       >
         <Link href="/">

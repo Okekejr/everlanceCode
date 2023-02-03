@@ -18,7 +18,7 @@ export const MiniCard: FC<Props> = ({ data }) => {
       height={{ base: "auto", lg: "4.5rem" }}
       p={4}
       w={{ base: "14rem", lg: "16rem" }}
-      my={12}
+      my='2.5rem'
     >
       <Box
         display="flex"
