@@ -1,22 +1,28 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { FC, useState } from "react";
 import { SectionContainer } from "../SectionContainer";
-import { useQuery, QueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { Request } from "../Request/Request";
 import { ProfileList } from "../Profiles/ProfileList";
+import { ErrorPage } from "./Error";
+import { ErrorPage2 } from "./Error2";
 
 const HomePage: FC = () => {
   const [search, setSearch] = useState("");
   const [final, setFinal] = useState("");
 
-  const { data } = useQuery(
+  const { data, status, error } = useQuery(
     ["userData", final],
     () => Request(final),
 
     { enabled: Boolean(final) }
   );
 
-  console.log(data)
+  if (status === "success" && data.length === 0) {
+    return <ErrorPage />;
+  } else if (status === "error") {
+    return <ErrorPage2 data={error} />;
+  }
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
@@ -34,7 +40,7 @@ const HomePage: FC = () => {
       <SectionContainer>
         <Flex
           justifyContent="space-between"
-          w={{ base: "fit-content", md: "2xl", lg: "6xl" }}
+          w={{ base: "20rem", md: "2xl", lg: "6xl" }}
           mb={8}
         >
           <Heading

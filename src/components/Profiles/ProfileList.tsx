@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Grid, GridProps } from "@chakra-ui/react";
-import { GitUsers, ItemsEntity } from "@/types/types";
+import { GitUsers } from "@/types/types";
 import { Cards } from "./Cards";
 
 interface Props extends GridProps {
